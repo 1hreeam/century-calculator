@@ -13,6 +13,13 @@ program.command('cent')
     .action((year: string) => {
         century(Number(year))
     })
+    
+program.command('year')
+    .description('Calculate the years based on the input century')
+    .argument('<century>', 'Input century')
+    .action((century: string) => {
+        year(Number(century))
+    })
 
 program.command('printall')
     .description('Return all the centuries (staring from 1 AD)')
@@ -20,13 +27,6 @@ program.command('printall')
     .argument('<n>', "The furthest year to calculate")
     .action((step: string, n:string) => {
         printall(Number(step), Number(n))
-    })
-
-program.command('year')
-    .description('Calculate the years based on the input century')
-    .argument('<century>', 'Input century')
-    .action((century: string) => {
-        year(Number(century))
     })
 
 program.parse()
