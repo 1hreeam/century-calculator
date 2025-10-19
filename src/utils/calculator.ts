@@ -1,4 +1,4 @@
-export function calculate(num: number): string {
+export function calculateCentury(num: number): string {
     if (num === 0) {
         return `1${getLastDigitSuffix(1)} century`
     }
@@ -23,4 +23,11 @@ function getLastDigitSuffix(num: number): string {
         case 3: return 'rd'
         default: return 'th'
     }
+}
+
+export function calculateYear(num: number): string {
+    const endYear = num * 100
+    const startYear = endYear - 99
+
+    return `${startYear}-${endYear}`
 }

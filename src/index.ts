@@ -1,5 +1,5 @@
 import { Command } from 'commander'
-import { century, printall } from './utils/commands.js'
+import { century, printall, year } from './utils/commands.js'
 const program = new Command()
 
 program
@@ -18,7 +18,15 @@ program.command('printall')
     .description('Return all the centuries (staring from 1 AD)')
     .argument('<step>', 'Step in between the years')
     .argument('<n>', "The furthest year to calculate")
-    .action((step: number, n:number) => {
+    .action((step: string, n:string) => {
         printall(Number(step), Number(n))
     })
+
+program.command('year')
+    .description('Calculate the years based on the input century')
+    .argument('<century>', 'Input century')
+    .action((century: string) => {
+        year(Number(century))
+    })
+
 program.parse()

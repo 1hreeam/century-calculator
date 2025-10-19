@@ -1,7 +1,7 @@
 import ora from "ora";
 import chalk from "chalk";
 
-import { calculate } from "../utils/calculator.js";
+import { calculateCentury, calculateYear } from "../utils/calculator.js";
 import type { PrintAllResult } from "./types.js";
 
 // Functions
@@ -9,7 +9,7 @@ export async function century(year: number) {
     const spinner = ora('Calculating...').start()
 
     await new Promise(r => setTimeout(r, 1000))
-    const century = calculate(Number(year))
+    const century = calculateCentury(Number(year))
     spinner.succeed('Calculation done')
     console.log(chalk.yellow(century));
 }
@@ -21,7 +21,7 @@ export async function printall(step: number, n: number) {
     for (let i = 1; i <= n; i += step) {
         results.push({
             year: i,
-            century: calculate(i)
+            century: calculateCentury(i)
         })
     }
 
@@ -32,4 +32,13 @@ export async function printall(step: number, n: number) {
     await new Promise(r => setTimeout(r, 1000))
     spinner.succeed('Data is ready')
     console.table(results)
+}
+
+export async function year(century: number) {
+    const spinner = ora('Calculating...').start()
+
+    await new Promise(r => setTimeout(r, 1000))
+    const years = calculateYear(century)
+    spinner.succeed('Calculations complete')
+    console.log(years);
 }
