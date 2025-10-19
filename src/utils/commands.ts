@@ -5,14 +5,13 @@ import { calculate } from "../utils/calculator.js";
 import type { PrintAllResult } from "./types.js";
 
 // Functions
-export function century(year: number) {
+export async function century(year: number) {
     const spinner = ora('Calculating...').start()
 
-    setTimeout(() => {
-        const century = calculate(Number(year))
-        spinner.succeed('Calculation done')
-        console.log(chalk.yellow(century));
-    }, 1000)
+    await new Promise(r => setTimeout(r, 1000))
+    const century = calculate(Number(year))
+    spinner.succeed('Calculation done')
+    console.log(chalk.yellow(century));
 }
 
 export async function printall(step: number, n: number) {
@@ -26,11 +25,11 @@ export async function printall(step: number, n: number) {
         })
     }
 
-    await new Promise(resolve => setTimeout(resolve, 1000))
+    await new Promise(r => setTimeout(r, 1000))
     spinner.succeed('Calculation done')
     spinner.start('Getting data...')
 
-    await new Promise(resolve => setTimeout(resolve, 1000))
+    await new Promise(r => setTimeout(r, 1000))
     spinner.succeed('Data is ready')
     console.table(results)
 }
