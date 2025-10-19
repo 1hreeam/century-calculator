@@ -5,6 +5,7 @@
   "main": "calc.js",
   "scripts": {
     "dev": "tsx --watch src/index.ts",
+    "test": "tsx src/index.ts",
     "build": "tsc",
     "start": "node dist/index.js"
   },
