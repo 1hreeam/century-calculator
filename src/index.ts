@@ -1,11 +1,19 @@
 import { Command } from 'commander'
 import { century, printall, year } from './utils/commands.js'
+import { interactiveMode } from './utils/interactiveMode.js'
 const program = new Command()
 
 program
     .name('century-calculator')
     .description('CLI tool to calculate a century based on a date')
     .version('0.0.1')
+
+program.command('interact')
+    .description('Open the app in the interactive mode')
+    .option('-l, --lite', 'Lite mode')
+    .action(() => {
+        interactiveMode()
+    })
 
 program.command('cent')
     .description('Calculate the century based on the input year')
