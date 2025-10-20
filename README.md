@@ -1,119 +1,135 @@
-# Century Calculator CLI
+# Century Calculator CLI 🚀
+  
+An elegant command-line interface tool that makes year-to-century conversions intuitive and enjoyable. Built with TypeScript and modern CLI tools for a seamless user experience.
 
-A sleek command-line interface tool for converting between years and centuries with an elegant, user-friendly experience.
+![TypeScript](https://img.shields.io/badge/TypeScript-5.9-blue?logo=typescript)
+![Node.js](https://img.shields.io/badge/Node.js-20.x-green?logo=node.js)
+![License](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
-[![Node.js](https://img.shields.io/badge/Node.js-14%2B-green)](https://nodejs.org)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.9-blue)](https://www.typescriptlang.org/)
+## ✨ Features
 
-## 🚀 Features
+- 🔄 Convert years to centuries with proper ordinal suffixes (1st, 2nd, 3rd, etc.)
+- 📅 Calculate year ranges for any given century
+- 📊 Generate detailed tables showing year-to-century mappings
+- 🎨 Beautiful ASCII art title and interactive CLI interface
+- ⚡ Real-time calculations with elegant loading animations
+- 🎯 Type-safe implementation with TypeScript
 
-- Convert any year to its corresponding century with proper ordinal suffixes
-- Calculate year ranges for any given century
-- Generate comprehensive tables showing year-to-century mappings
-- Beautiful CLI interface with loading spinners and colored output
-- Written in TypeScript for type safety and modern development experience
-
-## 📦 Installation
+## 🛠️ Installation
 
 ```bash
-# Clone the repository
-git clone https://github.com/1hreeam/century-calculator.git
 
-# Navigate to the project directory
-cd century-calculator
+# Clone the repository
+git clone https://github.com/yourusername/century-calc.git
+
+
+# Navigate to project directory
+cd century-calc
+
 
 # Install dependencies
 npm install
 
+
 # Build the project
 npm run build
 
-# Link the package globally (optional)
-npm link
 ```
 
-## 🔨 Usage
+## 🎮 Usage
 
-### Calculate Century from Year
+Launch the interactive mode:
 
 ```bash
-century-calculator cent <year>
+
+npm start
+
 ```
 
-Example:
-```bash
-$ century-calculator cent 1999
-21st century
-```
+### Available Operations
 
-### Calculate Year Range from Century
+1. **Calculate century from year**
 
-```bash
-century-calculator year <century>
-```
+   - Input any year (e.g., 1999)
+   - Get the corresponding century (e.g., "20th century")
 
-Example:
-```bash
-$ century-calculator year 21
-2001-2100
-```
+2. **Calculate year range from century**
 
-### Generate Comprehensive Table
+   - Input a century number (e.g., 21)
+   - Get the year range (e.g., "2001-2100")
 
-```bash
-century-calculator printall <step> <max-year>
-```
+3. **Generate century-year table**
 
-Example:
-```bash
-$ century-calculator printall 100 500
-┌─────────┬─────────┬──────────────────┐
-│ (index) │  year   │     century      │
-├─────────┼─────────┼──────────────────┤
-│    0    │    1    │   1st century    │
-│    1    │   101   │   2nd century    │
-│    2    │   201   │   3rd century    │
-│    3    │   301   │   4th century    │
-│    4    │   401   │   5th century    │
-└─────────┴─────────┴──────────────────┘
-```
+   - Specify the maximum year and step interval
+   - Get a formatted table showing year-to-century mappings
 
-## 🛠️ Commands
-
-| Command | Description | Arguments |
-|---------|-------------|-----------|
-| `cent` | Calculate century from year | `<year>`: Year to convert |
-| `year` | Calculate year range from century | `<century>`: Century to convert |
-| `printall` | Generate table of centuries | `<step>`: Interval between years<br>`<n>`: Maximum year to calculate |
-
-## 🔄 Development
+## 💻 Development
 
 ```bash
-# Run in development mode with hot reload
+
+# Run in development mode with hot-reload
 npm run dev
 
+  
 # Run tests
 npm test
 
+  
 # Build for production
 npm run build
 
-# Start production build
-npm start
+```
+  
+## 🏗️ Project Structure
+
+```bash
+
+century-calc/
+
+├── src/
+│   ├── index.ts         # Main application entry
+│   └── utils/
+│       ├── calculator.ts # Core calculation logic
+│       └── types.ts      # TypeScript type definitions
+├── dist/                # Compiled JavaScript output
+└── package.json         # Project configuration
+
 ```
 
-## 🤝 Contributing
+## 🔧 Technical Details
 
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/1hreeam/century-calculator/issues).
+- **TypeScript**: Strict type checking and modern JavaScript features
+- **Interactive CLI**: Built with Inquirer.js for smooth user interaction
+- **Visual Feedback**: Loading spinners and colored output using Ora and Chalk
+- **ASCII Art**: Beautiful CLI title using Figlet
 
-## 📄 License
+## 📜 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## ✨ Credits
+## 🤝 Contributing
 
-Built with:
-- [Commander.js](https://github.com/tj/commander.js/) - CLI framework
-- [Chalk](https://github.com/chalk/chalk) - Terminal styling
-- [Ora](https://github.com/sindresorhus/ora) - Elegant terminal spinners
+Contributions are welcome! Feel free to:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📚 Dependencies
+
+- `inquirer`: Interactive command line interface
+- `ora`: Elegant terminal spinners
+- `chalk`: Terminal string styling
+- `figlet`: ASCII art text generator
+
+## 🙏 Acknowledgments
+
+Special thanks to all the open-source projects that made this possible:
+
+- [Inquirer.js](https://github.com/SBoudrias/Inquirer.js)
+- [Ora](https://github.com/sindresorhus/ora)
+- [Chalk](https://github.com/chalk/chalk)
+- [Figlet](https://github.com/patorjk/figlet.js)
+  
