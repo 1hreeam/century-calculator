@@ -49,17 +49,12 @@ npm start
 ### Available Operations
 
 1. **Calculate century from year**
-
    - Input any year (e.g., 1999)
    - Get the corresponding century (e.g., "20th century")
-
 2. **Calculate year range from century**
-
    - Input a century number (e.g., 21)
    - Get the year range (e.g., "2001-2100")
-
 3. **Generate century-year table**
-
    - Specify the maximum year and step interval
    - Get a formatted table showing year-to-century mappings
 
